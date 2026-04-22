@@ -121,6 +121,7 @@ const Page = () => {
             imageSrc={last.cover}
             title={last.title}
             date={new Date(last.date)}
+            label={last.type}
           />
         )}
       </div>
