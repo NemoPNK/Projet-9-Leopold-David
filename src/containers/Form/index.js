@@ -12,19 +12,6 @@ const Form = ({ onSuccess, onError }) => {
     async (evt) => {
       evt.preventDefault();
 
-      const formFields = Array.from(
-        evt.currentTarget.querySelectorAll("input, textarea")
-      );
-      const hasEmptyField = formFields.some(
-        (field) => field.value.trim() === ""
-      );
-
-      if (hasEmptyField) {
-        // eslint-disable-next-line no-alert
-        alert("Tous les champs doivent être remplis");
-        return;
-      }
-
       setSending(true);
       // We try to call mockContactApi
       try {
